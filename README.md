@@ -6,6 +6,16 @@ This repository contains useful tweaks and tricks for optimizing your Fedora exp
 
 <br>
 
+## Speed Up DNF Downloads ⚡
+To improve DNF download speeds:
+```bash
+sudo echo "max_parallel_downloads=10
+fastestmirror=True" >> /etc/dnf/dnf.conf
+```
+This configuration allows for parallel downloads and selects the fastest mirror for quicker package retrieval.
+
+<br>
+
 ## Fix VLC Codecs 🎵
 
 To install VLC with required codecs:
