@@ -66,7 +66,7 @@ sudo dnf erase simple-scan
 <br>
 
 ## GNOME Extensions ✨
-**App Indicator Support** 
+**App Indicator Support**  
 Enable support for app indicators: [App Indicator](https://extensions.gnome.org/extension/615/appindicator-support)
 
 **Desktop Icons**  
