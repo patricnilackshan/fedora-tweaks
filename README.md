@@ -66,22 +66,22 @@ sudo dnf erase simple-scan
 <br>
 
 ## GNOME Extensions ✨
-**App Indicator Support**
+**App Indicator Support** 
 Enable support for app indicators: [App Indicator](https://extensions.gnome.org/extension/615/appindicator-support)
 
-**Desktop Icons**
+**Desktop Icons**  
 Enable desktop icons using the following extension: [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding)
 
-**Clipboard History**
+**Clipboard History**  
 Add clipboard history support: [Clipboard History](https://extensions.gnome.org/extension/4839/clipboard-history)
 
-**Click to Close Overview**
+**Click to Close Overview**  
 Enable clicking to close the overview: [Click to Close Overview](https://extensions.gnome.org/extension/3826/click-to-close-overview)
 
-**Dash to Dock**
+**Dash to Dock**  
 Enable a dock-like application launcher: [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock)
 
-**Show Desktop Button**
+**Show Desktop Button**  
 Add a button to show the desktop: [Show Desktop Button](https://extensions.gnome.org/extension/1194/show-desktop-button)
 
 <br>
