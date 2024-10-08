@@ -104,3 +104,59 @@ sudo dnf group install -y "C Development Tools and Libraries"
 sudo dnf group install -y "Development Tools"
 sudo dnf install -y cmake
 ```
+
+## Install MongoDB 🍃
+To install MongoDB on Fedora 40 and resolve potential OpenSSL issues, follow these steps:
+
+Step 1: Remove Existing MongoDB Installations ❌
+If you've previously installed MongoDB, remove any existing packages or repositories to avoid conflicts:
+
+```bash
+sudo systemctl stop mongod
+sudo dnf erase $(rpm -qa | grep mongo)
+sudo rpm -e mongodb-org mongodb-mongosh
+sudo rm -rf /var/log/mongodb /var/lib/mongo
+sudo rm -f /etc/yum.repos.d/mongodb-org-*.repo
+```
+
+Step 2: Add MongoDB 7.0 Repository 📦
+Create a repository file for MongoDB 7.0:
+
+```bash
+sudo nano /etc/yum.repos.d/mongodb-org-7.0.repo
+```
+
+Paste the following content into the file:
+```
+makefile
+Copy code
+[mongodb-org-7.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/9Server/mongodb-org/7.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://pgp.mongodb.com/server-7.0.asc
+```
+Save and close the file.
+
+Step 3: Install MongoDB with OpenSSL 3 Support 🔐
+To install MongoDB with the correct OpenSSL 3 support, use the following command:
+
+```bash
+sudo dnf install -y mongodb-org mongodb-mongosh-shared-openssl3
+```
+
+Step 4: Start MongoDB Service 🚀
+After installation, start the MongoDB service:
+
+```bash
+sudo systemctl start mongod
+```
+
+Step 5: Verify Installation ✅
+Check if MongoDB is running properly:
+
+```bash
+sudo systemctl status mongod
+```
+This should resolve any OpenSSL-related issues and allow MongoDB to function smoothly on Fedora 40.
