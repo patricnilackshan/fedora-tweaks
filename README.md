@@ -20,7 +20,7 @@ This configuration allows for parallel downloads and selects the fastest mirror 
 
 To install VLC with required codecs:
 ```bash
-sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf groupupdate -y multimedia && sudo dnf groupupdate -y sound-and-video && sudo dnf -y install vlc
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf groupupdate -y multimedia && sudo dnf groupupdate -y sound-and-video && sudo dnf -y install vlc
 ```
 <br>
 
@@ -123,19 +123,17 @@ Step 2: Add MongoDB 7.0 Repository 📦
 Create a repository file for MongoDB 7.0:
 
 ```bash
-sudo nano /etc/yum.repos.d/mongodb-org-7.0.repo
+sudo nano /etc/yum.repos.d/mongodb-org-8.0.repo
 ```
 
 Paste the following content into the file:
-```
-makefile
-Copy code
-[mongodb-org-7.0]
+```text
+[mongodb-org-8.0]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/9Server/mongodb-org/7.0/x86_64/
+baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/8.0/x86_64/
 gpgcheck=1
 enabled=1
-gpgkey=https://pgp.mongodb.com/server-7.0.asc
+gpgkey=https://pgp.mongodb.com/server-8.0.asc
 ```
 Save and close the file.
 
