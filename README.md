@@ -16,6 +16,15 @@ This configuration allows for parallel downloads and selects the fastest mirror 
 
 <br>
 
+## Clean system logs ♻️
+To clean system logs:
+```bash
+sudo journalctl --rotate
+sudo journalctl --vacuum-time=1s
+```
+
+<br>
+
 ## Fix VLC Codecs 🎵
 
 To install VLC with required codecs:
