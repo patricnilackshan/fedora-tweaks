@@ -119,8 +119,8 @@ sudo rm -rf /var/log/mongodb /var/lib/mongo
 sudo rm -f /etc/yum.repos.d/mongodb-org-*.repo
 ```
 
-Step 2: Add MongoDB 7.0 Repository 📦
-Create a repository file for MongoDB 7.0:
+Step 2: Add MongoDB 8.0 Repository 📦
+Create a repository file for MongoDB 8.0:
 
 ```bash
 sudo nano /etc/yum.repos.d/mongodb-org-8.0.repo
