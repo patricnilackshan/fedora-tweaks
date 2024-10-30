@@ -25,6 +25,14 @@ sudo journalctl --vacuum-time=1s
 
 <br>
 
+## Clean Old Kernels ♻️
+To clean old kernels:
+```bash
+sudo dnf -y install --setopt installonly_limit=1 kernel
+```
+
+<br>
+
 ## Fix VLC Codecs 🎵
 
 To install VLC with required codecs:
