@@ -156,8 +156,7 @@ sudo dnf install -y nodejs
 
 ## Install C++ Development Tools
 ```bash
-sudo dnf group install -y "C Development Tools and Libraries"
-sudo dnf group install -y "Development Tools"
+sudo dnf install @development-tools 
 sudo dnf install -y cmake
 ```
 
