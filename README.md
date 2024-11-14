@@ -39,6 +39,12 @@ To install VLC with required codecs:
 ```bash
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf groupupdate -y multimedia && sudo dnf groupupdate -y sound-and-video && sudo dnf -y install vlc
 ```
+
+To fix codecs error:
+```bash
+sudo dnf install ffmpeg libavcodec-freeworld --allowerasing
+```
+
 <br>
 
 ## Enable Fractional Scaling 📏
