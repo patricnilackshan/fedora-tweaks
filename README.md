@@ -116,6 +116,11 @@ Add a button to show the desktop: [Show Desktop Button](https://extensions.gnome
 sudo dnf install -y java-latest-openjdk-devel.x86_64
 ```
 
+To Change JAVA Alternative:
+```bash
+sudo alternatives --config java
+```
+
 ## Install NodeJS
 ```bash
 sudo dnf install -y nodejs
