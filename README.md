@@ -109,6 +109,35 @@ Add a button to show the desktop: [Show Desktop Button](https://extensions.gnome
 
 <br>
 
+# Install OBS
+```bash
+sudo dnf install obs-studio
+```
+
+# Install Brave
+Create a repository file for MongoDB 8.0:
+
+```bash
+sudo nano /etc/yum.repos.d/brave-browser.repo
+```
+
+Paste the following content into the file:
+```text
+[brave]
+name=Brave Browser
+baseurl=https://brave-browser-rpm-release.s3.brave.com/x86_64/
+gpgcheck=1
+gpgkey=https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+enabled=1
+```
+Save and close the file.
+
+Install Brave
+```bash
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+```
+
 # Install Programming Languages & Development Tools 🛠️
 
 ## Install Java JDK
@@ -134,7 +163,7 @@ sudo dnf install -y cmake
 ```
 
 ## Install MongoDB 🍃
-To install MongoDB on Fedora 40 and resolve potential OpenSSL issues, follow these steps:
+To install MongoDB on Fedora 41 and resolve potential OpenSSL issues, follow these steps:
 
 Step 1: Remove Existing MongoDB Installations ❌
 If you've previously installed MongoDB, remove any existing packages or repositories to avoid conflicts:
