@@ -37,7 +37,7 @@ sudo dnf -y install --setopt installonly_limit=1 kernel
 
 To install VLC with required codecs:
 ```bash
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf groupupdate -y multimedia && sudo dnf groupupdate -y sound-and-video && sudo dnf -y install vlc
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install @sound-and-video && sudo dnf install @multimedia && sudo dnf -y install vlc
 ```
 
 To fix codecs error:
@@ -115,13 +115,13 @@ sudo dnf install obs-studio
 ```
 
 # Install Brave
-Create a repository file for MongoDB 8.0:
+Create a repository file for Brave:
 
 ```bash
 sudo nano /etc/yum.repos.d/brave-browser.repo
 ```
 
-Paste the following content into the file:
+Paste the following content into the file and Save:
 ```text
 [brave]
 name=Brave Browser
@@ -130,7 +130,6 @@ gpgcheck=1
 gpgkey=https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 enabled=1
 ```
-Save and close the file.
 
 Install Brave
 ```bash
