@@ -42,7 +42,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 To fix codecs error:
 ```bash
-sudo dnf install ffmpeg libavcodec-freeworld --allowerasing
+sudo dnf install ffmpeg libavcodec-freeworld --allowerasingUpdate README.md
 ```
 
 <br>
@@ -110,11 +110,12 @@ Add a button to show the desktop: [Show Desktop Button](https://extensions.gnome
 <br>
 
 # Install OBS
+To install OBS:
 ```bash
 sudo dnf install obs-studio
 ```
 
-Install Intel QSV Decoder for OBS
+To install Intel QSV Decoder for OBS:
 ```bash
 sudo dnf install intel-media-driver
 ```
