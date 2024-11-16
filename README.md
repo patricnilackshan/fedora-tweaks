@@ -114,6 +114,11 @@ Add a button to show the desktop: [Show Desktop Button](https://extensions.gnome
 sudo dnf install obs-studio
 ```
 
+Install Intel QSV Decoder for OBS
+```bash
+sudo dnf install intel-media-driver
+```
+
 # Install Brave
 Create a repository file for Brave:
 
