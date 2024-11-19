@@ -42,7 +42,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 To fix codecs error:
 ```bash
-sudo dnf install ffmpeg libavcodec-freeworld --allowerasingUpdate README.md
+sudo dnf install ffmpeg libavcodec-freeworld --allowerasing
 ```
 
 <br>
